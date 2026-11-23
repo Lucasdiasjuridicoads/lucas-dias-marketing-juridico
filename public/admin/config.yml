@@ -2,7 +2,7 @@
 # Nunca coloque senhas, chaves ou client secret neste arquivo.
 backend:
   name: github
-  repo: SEU_USUARIO_GITHUB/lucas-dias-marketing-juridico
+  repo: Lucasdiasjuridicoads/lucas-dias-marketing-juridico
   branch: main
 
 locale: pt_BR
