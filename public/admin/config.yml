@@ -1,0 +1,64 @@
+# CONFIGURE ANTES DE USAR: substitua SEU_USUARIO_GITHUB por seu usuário do GitHub.
+# Nunca coloque senhas, chaves ou client secret neste arquivo.
+backend:
+  name: github
+  repo: SEU_USUARIO_GITHUB/lucas-dias-marketing-juridico
+  branch: main
+
+locale: pt_BR
+site_url: https://lucasdiasjuridicoads.netlify.app
+display_url: https://lucasdiasjuridicoads.netlify.app
+logo_url: /assets/lucas-dias-logo.jpeg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: artigos
+    label: Artigos do Blog
+    label_singular: Artigo
+    folder: content/posts
+    create: true
+    delete: true
+    format: json
+    extension: json
+    slug: '{{slug}}'
+    summary: '{{title}} — {{date}}'
+    fields:
+      - label: Título do artigo
+        name: title
+        widget: string
+        hint: Use um título que responda à pesquisa de um advogado no Google.
+      - label: Data de publicação
+        name: date
+        widget: datetime
+        type: date
+      - label: Descrição para o Google
+        name: description
+        widget: text
+        hint: Resuma o artigo em aproximadamente 140 a 160 caracteres.
+      - label: Categoria
+        name: category
+        widget: select
+        options:
+          - Tráfego Pago
+          - Marketing Jurídico
+          - Gestão Comercial
+          - SEO para Advogados
+      - label: Imagem de capa
+        name: image
+        widget: image
+        required: false
+        hint: Imagem horizontal. Se não escolher, o site usará uma imagem padrão.
+      - label: Autor
+        name: author
+        widget: string
+        default: Lucas Dias
+      - label: Publicar agora?
+        name: published
+        widget: boolean
+        default: true
+        hint: Desative para manter o artigo em rascunho. Rascunhos não aparecem no blog nem no sitemap.
+      - label: Texto do artigo
+        name: body
+        widget: markdown
