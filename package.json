@@ -1,0 +1,12 @@
+{
+  "name": "lucas-dias-blog-marketing-juridico",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site e blog estáticos Lucas Dias Marketing Jurídico, com CMS Sveltia e Netlify",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
